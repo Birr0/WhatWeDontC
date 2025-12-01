@@ -1,0 +1,21 @@
+# @package _global_
+
+defaults:
+- /data/galaxy10
+- /trainer/gpu 
+- /logger/checkpoint
+- /logger/wandb
+- /logger/csv
+- /paths/default
+- /hydra/default
+- model
+- meta
+- _self_
+
+seed: 42
+
+hydra:
+  mode: MULTIRUN
+
+trainer:
+  max_epochs: 200

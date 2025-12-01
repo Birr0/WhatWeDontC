@@ -1,0 +1,13 @@
+meta:
+  authors:
+  - BR
+  data_id: 3
+  data_name: galaxy10
+  description: Conditional flow matching trained on the galaxy10 latent space.
+  experiment_id: 5
+  experiment_name: galaxy10_Flow
+  experiment_path: ${paths.data_dir}/${meta.data_name}/${meta.experiment_name}/
+  version: 1.0
+  vae_ckpt_path: ${oc.env:DATA_ROOT}/${meta.data_name}_decals/galaxy10_VAE/ckpts/5413725_0.ckpt #add path to vae checkpoint here - ${oc.env:DATA_ROOT}/${meta.data_name}/galaxy10_VAE/ckpts/5277111.ckpt #5262443.ckpt
+  data_path: ${paths.data_dir}/galaxy10_decals
+  scratch_data_path: ${paths.scratch_data_dir}/galaxy10_decals

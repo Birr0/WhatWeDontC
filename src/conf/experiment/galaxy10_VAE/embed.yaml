@@ -1,0 +1,22 @@
+# @package _global_
+
+defaults:
+  - /data/galaxy10
+  - /trainer/gpu
+  - /logger/wandb
+  - /paths/default
+  - /hydra/default
+  - meta
+  - model
+  - _self_
+
+seed: 42
+
+splits: # partitions to embed.
+  - test
+
+lightning_loader:
+  ckpt_path: null # populated in code.
+  vae_ckpt_path: ${oc.env:DATA_ROOT}/${meta.data_name}/${meta.experiment_name}/ckpts/5413725_0.ckpt #5287281.ckpt #5277111.ckpt #5275788.ckpt #5267067.ckpt #5266036.ckpt #5262443.ckpt
+
+batch_limit: 1
