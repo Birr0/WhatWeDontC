@@ -1,0 +1,11 @@
+meta:
+  authors:
+  - BR
+  data_id: 1
+  data_name: rgbmnist
+  description: VAE for RGB MNIST dataset.
+  experiment_id: 2
+  experiment_name: rgbmnist_VAE
+  experiment_path: ${paths.data_dir}/${meta.data_name}/${meta.experiment_name}/
+  version: 1.0
+  data_path: ${paths.data_dir}/MNIST

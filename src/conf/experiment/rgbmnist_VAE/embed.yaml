@@ -1,0 +1,26 @@
+# @package _global_
+
+defaults:
+  - /data/rgbmnist
+  - /trainer/gpu
+  - /logger/wandb
+  - /paths/default
+  - /hydra/default
+  - sweeps
+  - meta
+  - model
+  - _self_
+
+splits: # partitions to embed.
+  - test
+
+batch_limit: 1
+
+lightning_loader:
+  ckpt_path: null # populated in code.
+  vae_ckpt_path: ${oc.env:DATA_ROOT}/${meta.data_name}/rgbmnist_VAE/ckpts/5252446.ckpt
+
+hydra:
+  sweeper:
+    params:
+      +seed: ${....sweeps.seeds.0}

@@ -1,0 +1,13 @@
+meta:
+  authors:
+  - BR
+  data_id: 1
+  data_name: rgbmnist
+  description: Conditional flow matching for the RGB MNIST latent space.
+  experiment_id: 3
+  experiment_name: rgbmnist_FlowMatch_b_digit
+  experiment_path: ${paths.data_dir}/${meta.data_name}/${meta.experiment_name}/
+  version: 1.0
+  vae_ckpt_path: ${oc.env:DATA_ROOT}/${meta.data_name}/rgbmnist_VAE/ckpts/5252446.ckpt
+  data_path: ${paths.data_dir}/MNIST
+  scratch_data_path: ${paths.scratch_data_dir}/rgbmnist/${hydra:job.id}

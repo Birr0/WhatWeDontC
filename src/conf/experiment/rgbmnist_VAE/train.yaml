@@ -1,0 +1,25 @@
+# @package _global_
+
+defaults:
+- /data/rgbmnist
+- /trainer/gpu
+- /logger/checkpoint
+- /logger/wandb
+- /logger/csv
+- /paths/default
+- /hydra/default
+- sweeps
+- model
+- meta
+- _self_
+
+hydra:
+  sweeper:
+    params:
+      +seed: ${....sweeps.seeds.0}
+
+trainer:
+  max_epochs: 1 #200
+  limit_train_batches: 10
+  limit_val_batches: 5
+  limit_test_batches: 1

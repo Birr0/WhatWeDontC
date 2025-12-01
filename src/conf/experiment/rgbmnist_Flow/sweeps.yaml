@@ -1,0 +1,9 @@
+sweeps:
+  drop_variables:
+  - '["b"]'
+  - '["b", "digit"]'
+  - '["digit"]'
+  seeds:
+  - 42
+  - 43
+  - 44
